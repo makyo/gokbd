@@ -103,7 +103,7 @@ Settings
   ├ Preview Liberties
   │   ├ * On
   │   └ Off
-  ├ Sharing
+  ├ SGF Sharing
   │   ├ P1
   │   │   ├ Name
   │   │   └ Email
