@@ -38,7 +38,7 @@ A mechanical keyboard version of Go. Because why not.
 · · · · · · · · · · · · · · · · · · · 
 · · · · · · · · · · · · · · · · · · · ┌──────┐
 · · · · · · · · · · · · · · · · · · · │ B/W  │  · [UP]
-· · · · · · · · · · · · · · · · · · · │ Line │  · [SELECT]
+· · · · · · · · · · · · · · · · · · · │ Line │  · [SELECT] [BACK]
 · · · · · · · · · · · · · · · · · · · │ LCD* │  · [DOWN]
 · · · · · · · · · · · · · · · · · · · └──────┘
 · · · · · · · · · · · · · · · · · · · 
@@ -81,19 +81,20 @@ A mechanical keyboard version of Go. Because why not.
 Settings
   ├ Rules Variants
   │   ├ Scoring
-  │   │   ├ JP
+  │   │   ├ * JP
   │   │   └ CN
   │   ├ Superko
   │   │   ├ * On
   │   │   └ Off
-  │   └ Time limit: [choice; def: None]
-  ├ Komi: [int]
+  │   └ Time limit: [choice; default: None]
+  ├ Komi: [float by .5]
+  ├ Board size: [int; default: 19x19]
   ├ Handicap
   │   ├ P1: [int]
   │   └ P2: [int]
   ├ Colors
-  │   ├ P1: [choice; def: red]
-  │   └ P2: [choice; def: blue]
+  │   ├ P1: [choice; default: red; red blue green orange purple white]
+  │   └ P2: [choice; default: blue; red blue green orange purple white]
   ├ Sounds
   │   ├ * On
   │   └ Off
@@ -101,8 +102,8 @@ Settings
   │   ├ * On
   │   └ Off
   ├ Preview Liberties
-  │   ├ * On
-  │   └ Off
+  │   ├ On
+  │   └ * Off
   ├ SGF Sharing
   │   ├ P1
   │   │   ├ Name
@@ -110,7 +111,8 @@ Settings
   │   └ P2
   │       ├ Name
   │       └ Email
-  └ Admin
+  └ Admin [password via board, line next to screen]
+      ├ Lock admin
       ├ Networking [On/off, settings, etc...]
       └ Game Info
           ├ Set up date
